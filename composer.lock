@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ae3e52059b82ceda16192352cfc7f17",
+    "content-hash": "578f6105117a90aacab73f3ec94bcc4d",
     "packages": [
         {
             "name": "corneltek/cascading-attribute",
@@ -45,16 +45,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/c9s/CLIFramework.git",
-                "reference": "56f72f9e60642b2f76cb4c25ab81a950a086a774"
+                "reference": "6dc45437b0eb41a9346a42f0a67ba0daf6001941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/c9s/CLIFramework/zipball/56f72f9e60642b2f76cb4c25ab81a950a086a774",
-                "reference": "56f72f9e60642b2f76cb4c25ab81a950a086a774",
+                "url": "https://api.github.com/repos/c9s/CLIFramework/zipball/6dc45437b0eb41a9346a42f0a67ba0daf6001941",
+                "reference": "6dc45437b0eb41a9346a42f0a67ba0daf6001941",
                 "shasum": ""
             },
             "require": {
-                "corneltek/codegen": "^3.1.0",
+                "corneltek/codegen": "4.0.x-dev",
                 "corneltek/getoptionkit": "~2.5.4",
                 "corneltek/universal": "^1.7",
                 "php": ">=5.3.0",
@@ -97,7 +97,7 @@
                 "getopt",
                 "zsh"
             ],
-            "time": "2017-05-17T16:01:54+00:00"
+            "time": "2017-05-18T17:31:42+00:00"
         },
         {
             "name": "corneltek/codegen",
@@ -105,26 +105,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/c9s/CodeGen.git",
-                "reference": "b06298170ab9bf49f54391973b520e661ad0d37f"
+                "reference": "6c407ea63296ef24a2ee8daac75ad2e840647b57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/c9s/CodeGen/zipball/b06298170ab9bf49f54391973b520e661ad0d37f",
-                "reference": "b06298170ab9bf49f54391973b520e661ad0d37f",
+                "url": "https://api.github.com/repos/c9s/CodeGen/zipball/6c407ea63296ef24a2ee8daac75ad2e840647b57",
+                "reference": "6c407ea63296ef24a2ee8daac75ad2e840647b57",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "*",
                 "php": ">=5.3.0",
-                "twig/twig": "^1.21"
-            },
-            "require-dev": {
-                "corneltek/phpunit-testmore": "dev-master"
+                "twig/twig": "^1|^2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "4.0.x-dev"
                 }
             },
             "autoload": {
@@ -144,27 +141,27 @@
             ],
             "description": "PHP Code Generation Library",
             "homepage": "http://github.com/c9s/CodeGen",
-            "time": "2017-05-17T05:29:08+00:00"
+            "time": "2017-05-18T17:21:51+00:00"
         },
         {
             "name": "corneltek/configkit",
-            "version": "1.6.2",
+            "version": "1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/c9s/ConfigKit.git",
-                "reference": "5e8a79eead3c3109a35a66a724107b02f3b0610d"
+                "reference": "55aaf1bf1b55ba06b41a3bc8d12a210dd1fce853"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/c9s/ConfigKit/zipball/5e8a79eead3c3109a35a66a724107b02f3b0610d",
-                "reference": "5e8a79eead3c3109a35a66a724107b02f3b0610d",
+                "url": "https://api.github.com/repos/c9s/ConfigKit/zipball/55aaf1bf1b55ba06b41a3bc8d12a210dd1fce853",
+                "reference": "55aaf1bf1b55ba06b41a3bc8d12a210dd1fce853",
                 "shasum": ""
             },
             "require": {
-                "corneltek/codegen": "^3",
+                "corneltek/codegen": ">=3.0",
                 "corneltek/fileutil": "^1",
                 "php": ">=5.3.0",
-                "symfony/yaml": "^2.8|3.0"
+                "symfony/yaml": "^2.8|^3.0|^3.2"
             },
             "require-dev": {
                 "corneltek/phpunit-testmore": "dev-master"
@@ -186,7 +183,7 @@
                 "config",
                 "yaml"
             ],
-            "time": "2017-05-17T13:57:17+00:00"
+            "time": "2017-05-18T17:34:15+00:00"
         },
         {
             "name": "corneltek/fileutil",
@@ -966,15 +963,16 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:maghead/laravel-maghead.git",
-                "reference": "829d9e8744d9ec18c65be6696ba2c07c24784b5d"
+                "reference": "052ec167e118b516b6f6b37394005211591b8ef8"
             },
             "require": {
                 "corneltek/cliframework": "4.0.x-dev",
-                "corneltek/codegen": "3.1.x-dev",
+                "corneltek/codegen": "4.0.x-dev",
                 "corneltek/sqlbuilder": "4.0.x-dev",
                 "illuminate/console": "^5.4",
                 "illuminate/support": "^5.4",
                 "maghead/maghead": "4.0.x-dev",
+                "maghead/magsql": "4.0.x-dev",
                 "php": ">=7.0"
             },
             "require-dev": {
@@ -1002,6 +1000,10 @@
                 {
                     "name": "Yo-An Lin",
                     "email": "yoanlin93@gmail.com"
+                },
+                {
+                    "name": "Recca Tsai",
+                    "email": "recca0120@gmail.com"
                 }
             ],
             "description": "A Maghead ORM bridge for Laravel 5",
@@ -1013,7 +1015,7 @@
                 "maghead",
                 "orm"
             ],
-            "time": "2017-05-18 07:48:34"
+            "time": "2017-05-19 06:24:42"
         },
         {
             "name": "maghead/maghead",
@@ -1021,32 +1023,31 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/maghead/maghead.git",
-                "reference": "9ba2fe5b4a7cdf02ad612ea3f27a9f22db1f936f"
+                "reference": "9d9d3c7c9c5292bf5b85645129953ebc7af7dae6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maghead/maghead/zipball/9ba2fe5b4a7cdf02ad612ea3f27a9f22db1f936f",
-                "reference": "9ba2fe5b4a7cdf02ad612ea3f27a9f22db1f936f",
+                "url": "https://api.github.com/repos/maghead/maghead/zipball/9d9d3c7c9c5292bf5b85645129953ebc7af7dae6",
+                "reference": "9d9d3c7c9c5292bf5b85645129953ebc7af7dae6",
                 "shasum": ""
             },
             "require": {
                 "corneltek/cascading-attribute": "^1.2",
                 "corneltek/cliframework": "4.0.x-dev",
-                "corneltek/codegen": "3.1.x-dev",
+                "corneltek/codegen": "4.0.x-dev",
                 "corneltek/configkit": "^1.6.2",
                 "corneltek/serializerkit": "^1",
-                "corneltek/sqlbuilder": "4.0.x-dev",
                 "corneltek/validationkit": "^1",
                 "cypresslab/gitelephant": "^1.0",
                 "doctrine/inflector": "~1.0",
-                "maghead/sqlite-parser": "~4.0",
+                "maghead/magsql": "4.0.x-dev",
+                "maghead/sqlite-parser": "^4.0",
                 "monolog/monolog": "^1.22",
                 "php": ">=7.0",
                 "pimple/pimple": "^3.0",
                 "psr/log": "^1.0",
                 "ramsey/uuid": "^3.5",
-                "symfony/yaml": "^2.8|^3.2",
-                "twig/twig": "1.32.x"
+                "symfony/yaml": "^2.8|^3.0|^3.2"
             },
             "require-dev": {
                 "ext-apcu": "*",
@@ -1091,7 +1092,48 @@
                 "orm",
                 "sql"
             ],
-            "time": "2017-05-17T16:03:57+00:00"
+            "time": "2017-05-19T06:34:21+00:00"
+        },
+        {
+            "name": "maghead/magsql",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maghead/magsql.git",
+                "reference": "103f74802d2882c5d3dc3bfc415775300ddcdc36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maghead/magsql/zipball/103f74802d2882c5d3dc3bfc415775300ddcdc36",
+                "reference": "103f74802d2882c5d3dc3bfc415775300ddcdc36",
+                "shasum": ""
+            },
+            "require-dev": {
+                "corneltek/phpunit-testmore": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Magsql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yo-An Lin",
+                    "email": "yoanlin93@gmail.com"
+                }
+            ],
+            "description": "Fast and Powerful SQL for PHP",
+            "time": "2017-05-18T17:10:25+00:00"
         },
         {
             "name": "maghead/sqlite-parser",
@@ -2750,30 +2792,31 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.32.0",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9935b662e24d6e634da88901ab534cc12e8c728f"
+                "reference": "85e8372c451510165c04bf781295f9d922fa524b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9935b662e24d6e634da88901ab534cc12e8c728f",
-                "reference": "9935b662e24d6e634da88901ab534cc12e8c728f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/85e8372c451510165c04bf781295f9d922fa524b",
+                "reference": "85e8372c451510165c04bf781295f9d922fa524b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.7"
+                "php": "^7.0",
+                "symfony/polyfill-mbstring": "~1.0"
             },
             "require-dev": {
                 "psr/container": "^1.0",
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2"
+                "symfony/phpunit-bridge": "~3.3@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.32-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -2808,7 +2851,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-02-27T00:07:03+00:00"
+            "time": "2017-04-21T00:13:02+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3826,23 +3869,23 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e"
+                "reference": "3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/13edfd8706462032c2f52b4b862974dd46b71c9e",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2",
+                "reference": "3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
             },
             "type": "library",
             "extra": {
@@ -3874,7 +3917,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-08T07:14:41+00:00"
+            "time": "2017-05-18T13:44:30+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -4282,11 +4325,12 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "maghead/maghead": 20,
+        "maghead/magsql": 20,
+        "corneltek/sqlbuilder": 20,
         "corneltek/cliframework": 20,
         "corneltek/codegen": 20,
-        "corneltek/sqlbuilder": 20,
-        "maghead/laravel-bridge": 20,
-        "maghead/maghead": 20
+        "maghead/laravel-bridge": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
