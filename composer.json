@@ -4,16 +4,30 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "repositories":[{
+        "type": "git",
+        "url": "git@github.com:maghead/laravel-maghead.git"
+    }, {
+        "type": "git",
+        "url": "git@github.com:maghead/maghead.git"
+    }, {
+        "type": "git",
+        "url": "git@github.com:c9s/CLIFramework.git"
+    }, {
+        "type": "git",
+        "url": "git@github.com:c9s/universal.git"
+    }],
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "maghead/maghead": "4.0.x-dev",
-        "maghead/magsql": "4.0.x-dev",
-        "corneltek/sqlbuilder": "4.0.x-dev",
-        "corneltek/cliframework": "4.0.x-dev",
-        "corneltek/codegen": "4.0.x-dev",
-        "maghead/laravel-bridge": "dev-master"
+        "maghead/maghead": "@dev",
+        "maghead/magsql": "@dev",
+        "corneltek/sqlbuilder": "@dev",
+        "corneltek/cliframework": "@dev",
+        "corneltek/codegen": "@dev",
+        "maghead/laravel-bridge": "@dev",
+        "universal/universal": "@dev"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.9",
