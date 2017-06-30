@@ -2,7 +2,6 @@
 
 namespace App\Model;
 
-
 use Maghead\Schema\RuntimeSchema;
 use Maghead\Schema\RuntimeColumn;
 use Maghead\Schema\Relationship\Relationship;
@@ -11,10 +10,8 @@ use Maghead\Schema\Relationship\HasMany;
 use Maghead\Schema\Relationship\BelongsTo;
 use Maghead\Schema\Relationship\ManyToMany;
 
-class TodoSchemaProxy
-    extends RuntimeSchema
+class TodoSchemaProxy extends RuntimeSchema
 {
-
     const SCHEMA_CLASS = 'App\\Model\\TodoSchema';
 
     const LABEL = 'Todo';
@@ -33,20 +30,20 @@ class TodoSchemaProxy
 
     const PRIMARY_KEY = 'id';
 
-    const GLOBAL_PRIMARY_KEY = NULL;
+    const GLOBAL_PRIMARY_KEY = null;
 
     const LOCAL_PRIMARY_KEY = 'id';
 
-    public static $column_hash = array (
+    public static $column_hash = array(
       'id' => 1,
       'title' => 1,
       'done' => 1,
     );
 
-    public static $mixin_classes = array (
+    public static $mixin_classes = array(
     );
 
-    public $columnNames = array (
+    public $columnNames = array(
       0 => 'id',
       1 => 'title',
       2 => 'done',
@@ -54,7 +51,7 @@ class TodoSchemaProxy
 
     public $primaryKey = 'id';
 
-    public $columnNamesIncludeVirtual = array (
+    public $columnNamesIncludeVirtual = array(
       0 => 'id',
       1 => 'title',
       2 => 'done',
@@ -70,12 +67,12 @@ class TodoSchemaProxy
 
     public function __construct()
     {
-        $this->columns[ 'id' ] = new RuntimeColumn('id',array( 
-      'locales' => NULL,
-      'attributes' => array( 
+        $this->columns[ 'id' ] = new RuntimeColumn('id', array(
+      'locales' => null,
+      'attributes' => array(
           'autoIncrement' => true,
           'renderAs' => 'HiddenInput',
-          'widgetAttributes' => array( 
+          'widgetAttributes' => array(
             ),
         ),
       'name' => 'id',
@@ -84,47 +81,47 @@ class TodoSchemaProxy
       'type' => 'int',
       'isa' => 'int',
       'notNull' => true,
-      'enum' => NULL,
-      'set' => NULL,
-      'onUpdate' => NULL,
+      'enum' => null,
+      'set' => null,
+      'onUpdate' => null,
       'autoIncrement' => true,
       'renderAs' => 'HiddenInput',
-      'widgetAttributes' => array( 
+      'widgetAttributes' => array(
         ),
     ));
-        $this->columns[ 'title' ] = new RuntimeColumn('title',array( 
-      'locales' => NULL,
-      'attributes' => array( 
+        $this->columns[ 'title' ] = new RuntimeColumn('title', array(
+      'locales' => null,
+      'attributes' => array(
           'length' => 80,
           'label' => 'Todo',
         ),
       'name' => 'title',
-      'primary' => NULL,
-      'unsigned' => NULL,
+      'primary' => null,
+      'unsigned' => null,
       'type' => 'varchar',
       'isa' => 'str',
-      'notNull' => NULL,
-      'enum' => NULL,
-      'set' => NULL,
-      'onUpdate' => NULL,
+      'notNull' => null,
+      'enum' => null,
+      'set' => null,
+      'onUpdate' => null,
       'length' => 80,
       'label' => 'Todo',
     ));
-        $this->columns[ 'done' ] = new RuntimeColumn('done',array( 
-      'locales' => NULL,
-      'attributes' => array( 
+        $this->columns[ 'done' ] = new RuntimeColumn('done', array(
+      'locales' => null,
+      'attributes' => array(
           'label' => 'Done',
           'default' => false,
         ),
       'name' => 'done',
-      'primary' => NULL,
-      'unsigned' => NULL,
+      'primary' => null,
+      'unsigned' => null,
       'type' => 'boolean',
       'isa' => 'bool',
-      'notNull' => NULL,
-      'enum' => NULL,
-      'set' => NULL,
-      'onUpdate' => NULL,
+      'notNull' => null,
+      'enum' => null,
+      'set' => null,
+      'onUpdate' => null,
       'label' => 'Done',
       'default' => false,
     ));

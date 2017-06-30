@@ -10,13 +10,11 @@ class TodoSchema extends DeclareSchema
     {
         $this->column('title')
             ->varchar(80)
-            ->label('Todo')
-            ;
+            ->label('Todo');
 
         $this->column('done')
             ->boolean()
             ->label('Done')
-            ->default(false)
-            ;
+            ->default(false);
     }
 }

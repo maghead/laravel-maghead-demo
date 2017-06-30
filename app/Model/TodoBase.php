@@ -2,7 +2,6 @@
 
 namespace App\Model;
 
-
 use Maghead\Runtime\Model;
 use Maghead\Schema\SchemaLoader;
 use Maghead\Runtime\Result;
@@ -10,10 +9,11 @@ use Maghead\Runtime\Inflator;
 use Magsql\Bind;
 use Magsql\ArgumentArray;
 use DateTime;
+use WebAction\Maghead\Traits\ActionCreatorTrait;
 
-class TodoBase
-    extends Model
+class TodoBase extends Model
 {
+    use ActionCreatorTrait;
 
     const SCHEMA_PROXY_CLASS = 'App\\Model\\TodoSchemaProxy';
 
@@ -41,17 +41,17 @@ class TodoBase
 
     const PRIMARY_KEY = 'id';
 
-    const GLOBAL_PRIMARY_KEY = NULL;
+    const GLOBAL_PRIMARY_KEY = null;
 
     const LOCAL_PRIMARY_KEY = 'id';
 
-    public static $column_names = array (
+    public static $column_names = array(
       0 => 'id',
       1 => 'title',
       2 => 'done',
     );
 
-    public static $mixin_classes = array (
+    public static $mixin_classes = array(
     );
 
     protected $table = 'todos';
@@ -66,7 +66,7 @@ class TodoBase
     {
         static $schema;
         if ($schema) {
-           return $schema;
+            return $schema;
         }
         return $schema = new \App\Model\TodoSchemaProxy;
     }
@@ -115,7 +115,7 @@ class TodoBase
     {
         $value = $this->done;
         if ($value === '' || $value === null) {
-           return null;
+            return null;
         }
         return boolval($value);
     }
@@ -132,15 +132,21 @@ class TodoBase
 
     public function setData(array $data)
     {
-        if (array_key_exists("id", $data)) { $this->id = $data["id"]; }
-        if (array_key_exists("title", $data)) { $this->title = $data["title"]; }
-        if (array_key_exists("done", $data)) { $this->done = $data["done"]; }
+        if (array_key_exists("id", $data)) {
+            $this->id = $data["id"];
+        }
+        if (array_key_exists("title", $data)) {
+            $this->title = $data["title"];
+        }
+        if (array_key_exists("done", $data)) {
+            $this->done = $data["done"];
+        }
     }
 
     public function clear()
     {
-        $this->id = NULL;
-        $this->title = NULL;
-        $this->done = NULL;
+        $this->id = null;
+        $this->title = null;
+        $this->done = null;
     }
 }

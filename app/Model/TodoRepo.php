@@ -2,10 +2,8 @@
 
 namespace App\Model;
 
-
 use App\Model\TodoRepoBase;
 
-class TodoRepo
-    extends TodoRepoBase
+class TodoRepo extends TodoRepoBase
 {
 }

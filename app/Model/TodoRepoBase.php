@@ -2,7 +2,6 @@
 
 namespace App\Model;
 
-
 use Maghead\Schema\SchemaLoader;
 use Maghead\Runtime\Result;
 use Maghead\Runtime\Model;
@@ -13,10 +12,8 @@ use PDO;
 use Magsql\Universal\Query\InsertQuery;
 use Maghead\Runtime\Repo;
 
-class TodoRepoBase
-    extends Repo
+class TodoRepoBase extends Repo
 {
-
     const SCHEMA_CLASS = 'App\\Model\\TodoSchema';
 
     const SCHEMA_PROXY_CLASS = 'App\\Model\\TodoSchemaProxy';
@@ -39,19 +36,19 @@ class TodoRepoBase
 
     const DELETE_BY_PRIMARY_KEY_SQL = 'DELETE FROM todos WHERE id = ?';
 
-    public static $columnNames = array (
+    public static $columnNames = array(
       0 => 'id',
       1 => 'title',
       2 => 'done',
     );
 
-    public static $columnHash = array (
+    public static $columnHash = array(
       'id' => 1,
       'title' => 1,
       'done' => 1,
     );
 
-    public static $mixinClasses = array (
+    public static $mixinClasses = array(
     );
 
     protected $table = 'todos';
@@ -68,7 +65,7 @@ class TodoRepoBase
     {
         static $schema;
         if ($schema) {
-           return $schema;
+            return $schema;
         }
         return $schema = new \App\Model\TodoSchemaProxy;
     }
@@ -76,8 +73,8 @@ class TodoRepoBase
     public function findByPrimaryKey($pkId)
     {
         if (!$this->loadStm) {
-           $this->loadStm = $this->read->prepare(self::FIND_BY_PRIMARY_KEY_SQL);
-           $this->loadStm->setFetchMode(PDO::FETCH_CLASS, 'App\Model\Todo', [$this]);
+            $this->loadStm = $this->read->prepare(self::FIND_BY_PRIMARY_KEY_SQL);
+            $this->loadStm->setFetchMode(PDO::FETCH_CLASS, 'App\Model\Todo', [$this]);
         }
         $this->loadStm->execute([ $pkId ]);
         $obj = $this->loadStm->fetch();
@@ -98,7 +95,7 @@ class TodoRepoBase
     public function deleteByPrimaryKey($pkId)
     {
         if (!$this->deleteStm) {
-           $this->deleteStm = $this->write->prepare(self::DELETE_BY_PRIMARY_KEY_SQL);
+            $this->deleteStm = $this->write->prepare(self::DELETE_BY_PRIMARY_KEY_SQL);
         }
         return $this->deleteStm->execute([$pkId]);
     }

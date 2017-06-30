@@ -2,13 +2,10 @@
 
 namespace App\Model;
 
-
 use Maghead\Runtime\Collection;
 
-class TodoCollectionBase
-    extends Collection
+class TodoCollectionBase extends Collection
 {
-
     const SCHEMA_PROXY_CLASS = 'App\\Model\\TodoSchemaProxy';
 
     const MODEL_CLASS = 'App\\Model\\Todo';
@@ -30,7 +27,7 @@ class TodoCollectionBase
     {
         static $schema;
         if ($schema) {
-           return $schema;
+            return $schema;
         }
         return $schema = new \App\Model\TodoSchemaProxy;
     }

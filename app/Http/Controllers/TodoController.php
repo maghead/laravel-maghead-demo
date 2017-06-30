@@ -2,27 +2,61 @@
 
 namespace App\Http\Controllers;
 
+use stdClass;
 use App\Model\Todo;
+use Illuminate\Http\Request;
 use App\Model\TodoCollection;
 
 class TodoController extends Controller
 {
     public function index()
     {
-        $todos = [
-            ['title' => 'Attend the design meeting'],
-            ['title' => 'Buy some fruits'],
-            ['title' => 'Fix the bugs'],
-        ];
+        $todos = new TodoCollection;
 
-        foreach ($todos as $todo) {
-            $ret = Todo::create([
-                'title' => $todo['title']
-            ]);
-        }
+        return view('index', compact('todos'));
+    }
 
-        $todoCollection = new TodoCollection;
+    public function create()
+    {
+        $todo = new stdClass;
+        $todo->title = '';
+        $todo->done = false;
 
-        return response()->json($todoCollection->toArray());
+        return view('form', compact('todo'));
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+        $data['done'] = array_pull($data, 'done', false);
+
+        Todo::create($data);
+
+        return redirect(route('todo.index'));
+    }
+
+    public function edit($id)
+    {
+        $todo = Todo::findByPrimaryKey($id);
+
+        return view('form', compact('todo'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $todo = Todo::findByPrimaryKey($id);
+        $data = $request->all();
+        $data['done'] = array_pull($data, 'done', false);
+        $todo->update($data);
+
+        return redirect(route('todo.index'));
+    }
+
+    public function destroy($id)
+    {
+        $todo = Todo::findByPrimaryKey($id);
+        $todo->delete();
+
+        return redirect(route('todo.index'));
     }
 }
