@@ -85,7 +85,12 @@ class TodoRepoBase
         return $obj;
     }
 
-    protected function unsetImmutableArgs($args)
+    public function collection()
+    {
+        return new TodoCollection($this);
+    }
+
+    protected static function unsetImmutableArgs($args)
     {
         return $args;
     }
